@@ -13,12 +13,17 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   –webkit-overflow-scrolling: touch;
+  background-color: #007bff;
   font-family: 'Inter', sans-serif;
 }
 
 a:hover {
   text-decoration: none;
   color: none;
+}
+
+h2 {
+  font-size: 42px;
 }
 
 /* Header */
@@ -96,6 +101,7 @@ section#about p {
   color: #fff;
   letter-spacing: 1px;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 section#about p.about-top {
@@ -118,14 +124,34 @@ section#portfolio {
   color: #000;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%); */
   padding-bottom: 60px;
+  font-size: 16px;
 }
 
 section#portfolio .portfolio-container {}
 
 /* Our Rates */
 section#ourRates {
-  height: 75vh;
   background-color: #007bff;
+  clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
+}
+
+section#ourRates div.rates-container {
+  clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+  color: #fff;
+  padding: 60px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Quote Section */
+section#quote {
+  background-color: #007bff;
+}
+
+section#quote div.container-quote {
+  background-image: url("../assets/snow.jpg");
+  background-color: #007bff;
+  height: 75vh;
   clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
 }
 
@@ -161,5 +187,14 @@ section#ourRates {
   section#about div.about-container {
     text-align: center;
     padding: 0px;
+  }
+
+  section#about {
+    padding-bottom: 130px;
+  }
+
+  section#ourRates div.rates-container {
+    padding: 15px;
+    padding-top: 60px;
   }
 }
