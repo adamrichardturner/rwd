@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  –webkit-overflow-scrolling: touch;
+  font-family: 'Inter', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  color: none;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+}
+
+div.header-container {
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  background-image: url("../assets/richmong-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+}
+
+div.header-container h1 {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-size: 42px;
+  letter-spacing: -2px;
+}
+
+div.header-container h2 {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: -2px;
+  line-height: 1.5;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div.button-title {
+  width: 150px;
+  padding: 10px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5%;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+div.button-title:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+/* About */
+section#about {
+  height: auto;
+  background-color: #007bff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  padding-bottom: 172px;
+}
+
+section#about div.about-container {
+  padding: 0px 60px;
+}
+
+section#about h2 {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-size: 42px;
+  letter-spacing: -2px;
+}
+
+section#about p {
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+section#about p.about-top {
+  margin-top: 15px;
+}
+
+.fa-pound-sign {
+  font-size: 60px;
+  color: #fff;
+}
+
+br.about-headline-break {
+  display: none;
+}
+
+/* Portfolio */
+section#portfolio {
+  height: auto;
+  background-color: #fff;
+  color: #000;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%); */
+  padding-bottom: 60px;
+}
+
+section#portfolio .portfolio-container {}
+
+/* Our Rates */
+section#ourRates {
+  height: 75vh;
+  background-color: #007bff;
+  clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  div.header-container {
+    padding: 60px 0px;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  div.header-container h1 {
+    font-size: 22px;
+    letter-spacing: 0px;
+  }
+
+  div.header-container h2 {
+    font-size: 18px;
+    letter-spacing: -2px;
+  }
+
+  div.button-title {
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 12px;
+    width: 124px;
+  }
+
+  br.about-headline-break {
+    display: block;
+  }
+
+  section#about div.about-container {
+    text-align: center;
+    padding: 0px;
+  }
+}

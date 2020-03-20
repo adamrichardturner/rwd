@@ -26,6 +26,382 @@ h2 {
   font-size: 42px;
 }
 
+.displayNow {
+  display: block !important;
+}
+
+/* Navbar */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
+  font-size: 10px;
+}
+
+.nav {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  z-index: 5000;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+  color: #00E676;
+}
+
+.nav div.main_list {
+  height: 65px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 65px;
+  font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+  color: #00E676;
+}
+
+.navTrigger {
+  display: none;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Media qurey section */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .navTrigger {
+    display: block;
+  }
+
+  .nav div.logo {
+    margin-left: 15px;
+  }
+
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #111;
+    /*same background color of navbar*/
+    background-position: center top;
+  }
+
+  .nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+  }
+
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 20px;
+  }
+
+  .nav div.media_button {
+    display: block;
+  }
+}
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  padding: 0;
+  background-color: #111;
+}
+
+.myH2 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.myP {
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 20px;
+}
+
+@media all and (max-width:700px) {
+  .myP {
+    padding: 2%;
+  }
+}
+
 /* Header */
 header {
   background-color: #007bff;
@@ -82,8 +458,6 @@ div.button-title:hover {
 section#about {
   height: auto;
   background-color: #007bff;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
-  padding-bottom: 172px;
 }
 
 section#about div.about-container {
@@ -101,16 +475,19 @@ section#about p {
   color: #fff;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 section#about p.about-top {
   margin-top: 15px;
 }
 
-.fa-pound-sign {
-  font-size: 60px;
-  color: #fff;
+section#about div.image-wrapper {
+  height: 100%;
+}
+
+section#about div.image-wrapper img {
+  margin: 0 auto;
 }
 
 br.about-headline-break {
@@ -119,43 +496,160 @@ br.about-headline-break {
 
 /* Portfolio */
 section#portfolio {
-  height: auto;
-  background-color: #fff;
-  color: #000;
+  height: 75vh;
+  background-image: url("../assets/snow.jpg");
+  color: #fff;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%); */
   padding-bottom: 60px;
   font-size: 16px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-section#portfolio .portfolio-container {}
+section#portfolio h2 {
+  font-size: 42px;
+}
 
-/* Our Rates */
-section#ourRates {
+section#portfolio .portfolio-container {
+  padding: 60px;
+}
+
+.carousel {
+  z-index: 2;
+}
+
+/* Technology */
+section#tech {
   background-color: #007bff;
-  clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
 }
 
-section#ourRates div.rates-container {
-  clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+.tech-stack {
+  font-size: 120px;
+}
+
+section#tech h3 {
+  font-size: 42px;
+  font-family: 'Inter', sans-serif;
+}
+
+section#tech div.tech-container {
   color: #fff;
   padding: 60px;
   color: #fff;
   font-weight: bold;
 }
 
+section#tech h3.services-top {
+  font-size: 36px;
+}
+
+section#tech ul {
+  font-size: 24px;
+}
+
 /* Quote Section */
 section#quote {
-  background-color: #007bff;
+  background: white;
 }
 
 section#quote div.container-quote {
-  background-image: url("../assets/snow.jpg");
-  background-color: #007bff;
   height: 75vh;
   clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
 }
 
+div.cards a {
+  display: inline-block;
+}
+
+div.cards {
+  margin-top: 60px;
+}
+
+.go-corner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #007bff;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #007bff;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+  -webkit-transform: scale(21);
+  transform: scale(21);
+}
+
+.card1:hover p {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card1:hover h3 {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
 /* Media Queries */
+@media only screen and (max-width: 1199px) {
+  section#about div.image-wrapper img {
+    display: none;
+  }
+
+  .circle {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   div.header-container {
     padding: 60px 0px;
