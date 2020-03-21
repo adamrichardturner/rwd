@@ -554,7 +554,7 @@ section#quote {
 }
 
 section#quote div.container-quote {
-  height: 75vh;
+  height: auto;
   clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
 }
 
@@ -660,11 +660,18 @@ div.contact-form h3 {
 
 div.contact-form form {
   padding: 60px;
+  padding-top: 0px;
   width: 50%;
 }
 
 div.contact-form form button {
   width: 100%;
+}
+
+div.contact-form form button:hover {
+  background: #111;
+  color: #fff;
+  transition: 0.5s;
 }
 
 /* Media Queries */
