@@ -25,3 +25,12 @@ $(window).scroll(function() {
     $('.nav').removeClass('affix');
   }
 });
+
+$(document).ready(function() {
+  setTimeout(function() {
+    $("#cookieConsent").fadeIn(0.5);
+  }, 100);
+  $("#closeCookieConsent, .cookieConsentOK").click(function() {
+    $("#cookieConsent").fadeOut(200);
+  });
+});
