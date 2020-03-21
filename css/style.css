@@ -30,6 +30,31 @@ div.preview-container img {
   display: none;
 }
 
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
 /* Navbar */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
@@ -66,7 +91,7 @@ body {
 }
 
 .nav div.logo a:hover {
-  color: #00E676;
+  color: #007bff;
 }
 
 .nav div.main_list {
@@ -98,7 +123,7 @@ body {
 }
 
 .nav div.main_list ul li a:hover {
-  color: #00E676;
+  color: #fff;
 }
 
 .navTrigger {
@@ -147,7 +172,6 @@ body {
     left: 0;
     bottom: 0;
     background-color: #111;
-    /*same background color of navbar*/
     background-position: center top;
   }
 
@@ -168,8 +192,6 @@ body {
   }
 }
 
-/* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 .navTrigger {
   cursor: pointer;
   width: 30px;
@@ -795,4 +817,10 @@ footer {
     font-size: 24px;
     letter-spacing: 2px;
   }
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
