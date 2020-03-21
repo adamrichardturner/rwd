@@ -642,11 +642,29 @@ div.cards {
 
 /* Quote */
 div.container-quote {
-  background-image: url("../assets/deer.jpg");
-  background-size: cover;
-  background-color: #007bff;
+  background-color: #D3D3D3;
   background-position: center center;
   height: 75vh;
+}
+
+div.contact-form {
+  margin-top: 25vh;
+  font-size: 42px;
+}
+
+div.contact-form h3 {
+  font-size: 42px;
+  font-family: 'Inter', sans-serif;
+  padding-left: 60px;
+}
+
+div.contact-form form {
+  padding: 60px;
+  width: 50%;
+}
+
+div.contact-form form button {
+  width: 100%;
 }
 
 /* Media Queries */
@@ -742,5 +760,22 @@ div.container-quote {
 
   section#tech ul li {
     font-size: 14px;
+  }
+
+  div.contact-form h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  div.contact-form form {
+    padding: 0px;
+    width: 100%;
+  }
+
+  div.contact-form h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
   }
 }
