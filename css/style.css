@@ -497,7 +497,8 @@ br.about-headline-break {
 /* Portfolio */
 section#portfolio {
   height: 75vh;
-  background-image: url("../assets/snow.jpg");
+  background-image: url("../assets/forest.jpg");
+  background-attachment: fixed;
   color: #fff;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%); */
   padding-bottom: 60px;
@@ -549,7 +550,7 @@ section#tech ul {
 
 /* Quote Section */
 section#quote {
-  background: white;
+  background: #007bff;
 }
 
 section#quote div.container-quote {
@@ -639,6 +640,15 @@ div.cards {
   color: #ffffff;
 }
 
+/* Quote */
+div.container-quote {
+  background-image: url("../assets/deer.jpg");
+  background-size: cover;
+  background-color: #007bff;
+  background-position: center center;
+  height: 75vh;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1199px) {
   section#about div.image-wrapper img {
@@ -663,8 +673,8 @@ div.cards {
   }
 
   div.header-container h2 {
-    font-size: 18px;
-    letter-spacing: -2px;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 
   div.button-title {
@@ -678,17 +688,49 @@ div.cards {
     display: block;
   }
 
+  section#about h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  section#about p {
+    font-size: 14px;
+  }
+
   section#about div.about-container {
     text-align: center;
     padding: 0px;
   }
 
   section#about {
-    padding-bottom: 130px;
+    padding-bottom: 60px;
   }
 
   section#ourRates div.rates-container {
     padding: 15px;
     padding-top: 60px;
+  }
+
+  section#portfolio {
+    height: auto;
+    padding: 0px;
+    padding-bottom: 0px !important;
+  }
+
+  section#portfolio .portfolio-container {
+    height: auto;
+    padding: 0px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-attachment: scroll !important;
+  }
+
+  section#portfolio h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  section#tech h3 {
+    font-size: 24px;
   }
 }
