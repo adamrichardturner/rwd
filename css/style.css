@@ -26,8 +26,8 @@ h2 {
   font-size: 42px;
 }
 
-.displayNow {
-  display: block !important;
+div.preview-container img {
+  display: none;
 }
 
 /* Navbar */
@@ -496,7 +496,7 @@ br.about-headline-break {
 
 /* Portfolio */
 section#portfolio {
-  height: 75vh;
+  height: auto;
   background-image: url("../assets/forest.jpg");
   background-attachment: fixed;
   color: #fff;
