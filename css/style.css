@@ -438,6 +438,7 @@ div.header-container {
   background-position: center center;
   background-attachment: fixed;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
 }
 
 div.header-container h1 {
@@ -522,7 +523,6 @@ section#portfolio {
   background-image: url("../assets/forest.jpg");
   background-attachment: fixed;
   color: #fff;
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%); */
   padding-bottom: 60px;
   font-size: 16px;
   overflow-y: hidden;
@@ -578,6 +578,7 @@ section#quote {
 section#quote div.container-quote {
   height: auto;
   clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
 }
 
 div.cards a {
