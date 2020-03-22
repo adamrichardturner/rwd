@@ -722,10 +722,14 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    background-attachment: scroll !important;
+  }
+
   div.header-container {
     padding: 60px 0px;
     text-align: center;
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 
   div.header-container h1 {
@@ -776,6 +780,7 @@ footer {
     height: auto;
     padding: 0px;
     padding-bottom: 0px !important;
+    background-attachment: scroll !important;
   }
 
   section#portfolio .portfolio-container {
