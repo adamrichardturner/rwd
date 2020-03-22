@@ -568,6 +568,7 @@ section#tech h3.services-top {
 
 section#tech ul {
   font-size: 24px;
+  line-height: 50px;
 }
 
 /* Quote Section */
@@ -665,7 +666,9 @@ div.cards {
 
 /* Quote */
 div.container-quote {
-  background-color: #D3D3D3;
+  background-image: url("../assets/deer.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   height: 75vh;
 }
@@ -679,6 +682,7 @@ div.contact-form h3 {
   font-size: 42px;
   font-family: 'Inter', sans-serif;
   padding-left: 60px;
+  color: #fff;
 }
 
 div.contact-form form {
@@ -815,6 +819,10 @@ footer p {
 
   section#tech ul li {
     font-size: 14px;
+  }
+
+  div.container-quote {
+    background-attachment: scroll !important;
   }
 
   div.contact-form h3 {
