@@ -715,6 +715,10 @@ footer {
   .circle {
     display: none;
   }
+
+  div.contact-form form {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
